@@ -3,63 +3,61 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-	public class openclosedouble : MonoBehaviour
+public class openclosedouble : MonoBehaviour
+{
+	public Animator openandclose;
+	public bool open;
+	public Transform Player;
+
+	void Start()
 	{
-		public Animator openandclose;
-		public bool open;
-		public Transform Player;
+		open = false;
+	}
 
-		void Start()
-		{
-			open = false;
-		}
+    private void Update()
+    {
+		ActivateDoor();
+    }
 
-		void ActivateDoor()
+    void ActivateDoor()
+	{
+		if (Player)
 		{
-			if (Player)
+			float dist = Vector3.Distance(Player.position, transform.position);
+			if (dist < 2.5f)
 			{
-				float dist = Vector3.Distance(Player.position, transform.position);
-				if (dist < 2)
+				if (open == false)
 				{
-					if (open == false)
-					{
-
-						StartCoroutine(opening());
-
-					}
-					else
-					{
-						if (open == true)
-						{
-
-							StartCoroutine(closing());
-
-						}
-
-					}
-
+					StartCoroutine(opening());
 				}
 			}
 
-			
+			else
+			{
+				if (open == true)
+				{
+					StartCoroutine(closing());
+				}
+			}
 
 		}
-
-		IEnumerator opening()
-		{
-			print("you are opening the door");
-			openandclose.Play("ddopen");
-			open = true;
-			yield return new WaitForSeconds(.5f);
-		}
-
-		IEnumerator closing()
-		{
-			print("you are closing the door");
-			openandclose.Play("ddclose");
-			open = false;
-			yield return new WaitForSeconds(.5f);
-		}
-
-
 	}
+
+	IEnumerator opening()
+	{
+		print("you are opening the door");
+		openandclose.Play("ddopen");
+		open = true;
+		yield return new WaitForSeconds(.5f);
+	}
+
+	IEnumerator closing()
+	{
+		print("you are closing the door");
+		openandclose.Play("ddclose");
+		open = false;
+		yield return new WaitForSeconds(.5f);
+	}
+
+
+}
