@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SojaExiles
 
-{
 	public class openclosedouble : MonoBehaviour
 	{
-
 		public Animator openandclose;
 		public bool open;
 		public Transform Player;
@@ -17,37 +14,34 @@ namespace SojaExiles
 			open = false;
 		}
 
-		void OnMouseOver()
+		void ActivateDoor()
 		{
+			if (Player)
 			{
-				if (Player)
+				float dist = Vector3.Distance(Player.position, transform.position);
+				if (dist < 2)
 				{
-					float dist = Vector3.Distance(Player.position, transform.position);
-					if (dist < 15)
+					if (open == false)
 					{
-						if (open == false)
+
+						StartCoroutine(opening());
+
+					}
+					else
+					{
+						if (open == true)
 						{
-							if (Input.GetMouseButtonDown(0))
-							{
-								StartCoroutine(opening());
-							}
-						}
-						else
-						{
-							if (open == true)
-							{
-								if (Input.GetMouseButtonDown(0))
-								{
-									StartCoroutine(closing());
-								}
-							}
+
+							StartCoroutine(closing());
 
 						}
 
 					}
-				}
 
+				}
 			}
+
+			
 
 		}
 
@@ -69,4 +63,3 @@ namespace SojaExiles
 
 
 	}
-}
