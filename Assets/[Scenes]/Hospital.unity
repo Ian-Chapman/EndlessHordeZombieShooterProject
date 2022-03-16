@@ -817,6 +817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pavement
       objectReference: {fileID: 0}
+    - target: {fileID: 4805819846459020229, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4805819846459020234, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1331,7 +1335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4883106591707121355, guid: a5163a90512d63441bab54e013e074d2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4883106591707121356, guid: a5163a90512d63441bab54e013e074d2, type: 3}
       propertyPath: m_RootOrder
@@ -2775,6 +2779,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 099e6cc38da8ff74bb68d0bf29e24642, type: 2}
+    - target: {fileID: 5114033958530368084, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 5114033958573027435, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
       propertyPath: m_Controller
       value: 
@@ -2787,6 +2795,142 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 099e6cc38da8ff74bb68d0bf29e24642, type: 2}
+    - target: {fileID: 5725571516623852738, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571516681603558, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571516713754535, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571516731375200, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571516736406694, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571516783686528, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571516799469838, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571516901198469, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571516903945228, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571516915388810, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517066469487, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517095087378, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517111379879, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517213828884, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517322659114, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517431483852, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517487051351, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517608364923, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517728272728, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517823781276, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517830589618, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517833565416, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517854042689, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571517871850718, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518045308281, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518083340011, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518202353193, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518235389851, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518266704754, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518400268884, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518569942088, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518581759288, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518643391600, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725571518680015785, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 7537926181303633707, guid: 92b92113b74f5984b9ecfe92e0ae4ee1, type: 3}
       propertyPath: m_Controller
       value: 
@@ -2890,6 +3034,10 @@ PrefabInstance:
     - target: {fileID: 4805819846459020229, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
       propertyPath: m_Name
       value: Pavement (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805819846459020229, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4805819846459020234, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
       propertyPath: m_RootOrder
@@ -3280,6 +3428,10 @@ PrefabInstance:
     - target: {fileID: 4805819846459020229, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
       propertyPath: m_Name
       value: Pavement (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805819846459020229, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4805819846459020234, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
       propertyPath: m_RootOrder
@@ -3736,6 +3888,11 @@ Transform:
   m_Father: {fileID: 1474300635}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1276710693 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8302351701476132994, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}
+  m_PrefabInstance: {fileID: 8302351700260870322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1288612190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4883106591707121356, guid: a5163a90512d63441bab54e013e074d2, type: 3}
@@ -4374,6 +4531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pavement (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4805819846459020229, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4805819846459020234, guid: f6a3ddf6b8f030846a6fb67b983e44f5, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4638,6 +4799,30 @@ MonoBehaviour:
   openandclose: {fileID: 1970127109}
   open: 0
   Player: {fileID: 1593793883}
+--- !u!1 &1970854185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8302351701006002658, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}
+  m_PrefabInstance: {fileID: 8302351700260870322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1970854186
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970854185}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7e664a63f2157043a4299d37a3eb672, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!43 &1975846454
 Mesh:
   m_ObjectHideFlags: 0
@@ -5814,6 +5999,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8302351700782737197, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}
+      propertyPath: followTargetAnimator
+      value: 
+      objectReference: {fileID: 1970854186}
+    - target: {fileID: 8302351701006002659, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302351701006002659, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8411978220034095472, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5862,5 +6059,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9220708142541972427, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}
+      propertyPath: gripIKSocketLocation
+      value: 
+      objectReference: {fileID: 1276710693}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}

@@ -18,6 +18,8 @@ public class MovementComponent : MonoBehaviour
     Animator playerAnimator;
     public GameObject followTarget;
 
+    public Animator followTargetAnimator;
+
     //references
     Vector2 inputVector = Vector2.zero;
     Vector3 moveDirection = Vector3.zero;
@@ -127,13 +129,22 @@ public class MovementComponent : MonoBehaviour
 
 
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision other)
     {
-        if (!collision.gameObject.CompareTag("Ground") && !playerController.isJumping)
+
+
+        if (other.gameObject.CompareTag("Floor"))
+        {
+            followTargetAnimator.Play("CameraZoomIn");
+            Debug.Log("Floor");
+        }
+        else if (!other.gameObject.CompareTag("Floor"))
+            followTargetAnimator.Play("CameraZoomOut");
+
+        if (!other.gameObject.CompareTag("Ground") && !playerController.isJumping)
         {
             return;
         }
-
         playerController.isJumping = false;
         playerAnimator.SetBool(isJumpingHash, false);
     }
