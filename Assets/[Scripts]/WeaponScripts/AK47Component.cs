@@ -34,6 +34,8 @@ public class AK47Component : WeaponComponent
                 hitLocation = hit.point;
                 //this might be a good spot to add a bullet decal/bullet hole
 
+                
+
                 Vector3 hitDirection = hit.point - mainCamera.transform.position;
                 Debug.DrawRay(mainCamera.transform.position, hitDirection.normalized * weaponStats.fireDistance, Color.red, 1);
 

@@ -20,6 +20,11 @@ public class ZombieComponent : MonoBehaviour
         Initialize(followTarget);
     }
 
+    private void Start()
+    {
+        Initialize(followTarget);
+    }
+
 
     public void Initialize(GameObject _followTarget)
     {
