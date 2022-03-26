@@ -4,21 +4,12 @@ using UnityEngine;
 
 public class AK47Component : WeaponComponent
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    Vector3 hitLocation;
 
     protected override void FireWeapon()
     {
-        Vector3 hitLocation;
+        
 
         if (weaponStats.bulletsInClip > 0 && !isReloading && !weaponHolder.playerController.isRunning)
         {
@@ -34,7 +25,8 @@ public class AK47Component : WeaponComponent
                 hitLocation = hit.point;
                 //this might be a good spot to add a bullet decal/bullet hole
 
-                
+                //zombies take damage on raycast hit
+                DealDamage(hit);
 
                 Vector3 hitDirection = hit.point - mainCamera.transform.position;
                 Debug.DrawRay(mainCamera.transform.position, hitDirection.normalized * weaponStats.fireDistance, Color.red, 1);
@@ -47,5 +39,16 @@ public class AK47Component : WeaponComponent
         {
             weaponHolder.StartReloading();
         }
+    }
+
+    void DealDamage(RaycastHit hitInfo)
+    {
+        IDamageable damageable = hitInfo.collider.GetComponent<IDamageable>();
+        damageable?.TakeDamage(weaponStats.damage);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(hitLocation, 0.2f);
     }
 }

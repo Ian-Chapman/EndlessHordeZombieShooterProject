@@ -6845,6 +6845,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4006834682460966129, guid: 37413fa353966914d90a3eeba47063e7, type: 3}
   m_PrefabInstance: {fileID: 598226292}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &335081215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335081216}
+  - component: {fileID: 335081218}
+  - component: {fileID: 335081217}
+  m_Layer: 0
+  m_Name: SpawnerVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335081216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335081215}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 342222245}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &335081217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335081215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c5cdd678f45d64fa46879083ee477c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &335081218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335081215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &335087057
 GameObject:
   m_ObjectHideFlags: 0
@@ -6972,6 +7029,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37413fa353966914d90a3eeba47063e7, type: 3}
+--- !u!1 &342222241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342222245}
+  - component: {fileID: 342222243}
+  m_Layer: 0
+  m_Name: ZombieSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &342222243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342222241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ee72be92d83d145ab54458ea397e39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfZombiesToSpawn: 25
+  zombiePrefab:
+  - {fileID: 1231573334}
+  spawnVolumes:
+  - {fileID: 335081217}
+--- !u!4 &342222245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342222241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -59.09, y: 0.5, z: 0.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 335081216}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &351218217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24274,6 +24380,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37413fa353966914d90a3eeba47063e7, type: 3}
+--- !u!1 &1231573334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2756060406795128139, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+  m_PrefabInstance: {fileID: 3097939466410437773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1232604223
 GameObject:
   m_ObjectHideFlags: 0
@@ -42992,9 +43103,49 @@ PrefabInstance:
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 2055314448}
+    - target: {fileID: 3097939464723886096, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: zombieDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097939464723886098, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: m_Height
+      value: 1.8037102
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097939464723886098, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: m_Radius
+      value: 0.16692735
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097939464723886098, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0000130832195
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097939464723886098, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: m_Center.y
+      value: 0.8970672
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097939464723886098, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: m_Center.z
+      value: 0.022583308
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097939464723886099, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097939464723886100, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: m_CullingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097939464723886100, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3097939464723886102, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
       propertyPath: m_Speed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097939464723886102, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
+      propertyPath: m_Height
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 3097939464723886102, guid: 86da60ec8ccc26f4cbd77d9fa6cf1b9c, type: 3}
       propertyPath: m_Acceleration
@@ -43191,6 +43342,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3047587020903751737, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}
+      propertyPath: maxHealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8302351700782737197, guid: 2a0353e74c161d9458fd6530a9ab1294, type: 3}
       propertyPath: runSpeed
       value: 8
