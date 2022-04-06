@@ -21,28 +21,31 @@ public class opencloseDoor : MonoBehaviour
 
     void ActivateDoor()
 	{
-		if (Player)
-		{
-			float dist = Vector3.Distance(Player.position, transform.position);
-			if (dist < 2.5f)
-			{
-				if (open == false)
-				{
-					StartCoroutine(opening());
-				}
-			}
+        if (Player)
+        {
+            float dist = Vector3.Distance(Player.position, transform.position);
+            if (dist < 1.5f)
+            {
+                if (open == false)
+                {
+                    StartCoroutine(opening());
+                }
+            }
 
-			else 
-			{
-				if (open == true)
-				{
-					StartCoroutine(closing());
-				}
-			}
-		}
-	}
+            else
+            {
+                if (open == true)
+                {
+                    StartCoroutine(closing());
+                }
+            }
+        }
+    }
 
-	IEnumerator opening()
+
+
+
+    IEnumerator opening()
 	{
 		print("you are opening the door");
 		openandclose.Play("Opening");
