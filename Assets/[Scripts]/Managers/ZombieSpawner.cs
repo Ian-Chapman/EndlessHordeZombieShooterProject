@@ -10,6 +10,8 @@ public class ZombieSpawner : MonoBehaviour
 
     GameObject followGameObject;
 
+    
+
     void Start()
     {
         followGameObject = GameObject.FindGameObjectWithTag("Player");
