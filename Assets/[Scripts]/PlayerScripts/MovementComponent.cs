@@ -20,8 +20,6 @@ public class MovementComponent : MonoBehaviour
 
     public Animator followTargetAnimator;
 
-    //public GameObject inventory;
-
     //references
     Vector2 inputVector = Vector2.zero;
     Vector3 moveDirection = Vector3.zero;
@@ -128,11 +126,6 @@ public class MovementComponent : MonoBehaviour
         lookInput = value.Get<Vector2>();
         //if we aim up, down, adjust animations to have a mask that will let us properly animate aim
     }
-
-    //public void OnInventory(InputValue value)
-    //{
-    //    inventory = 
-    //}
 
 
 
