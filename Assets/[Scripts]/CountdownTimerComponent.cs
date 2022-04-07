@@ -20,7 +20,8 @@ public class CountdownTimerComponent : MonoBehaviour
         timerText.text = "" + Math.Round(timeLeft, 2);
         if (timeLeft <= 0)
         {
-            Destroy(bystander);
+            //Destroy(bystander);
+            animator.SetBool("isBecomeZombie", true);
         }
     }
 }
