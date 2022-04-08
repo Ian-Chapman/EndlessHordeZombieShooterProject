@@ -28,7 +28,7 @@ public class WeaponHolder : MonoBehaviour
     public WeaponScriptable startingWeaponScriptable;
 
 
-
+    public readonly int HasWeaponHash = Animator.StringToHash("HasWeapon");
     public readonly int isFiringHash = Animator.StringToHash("IsFiring");
     public readonly int isReloadingHash = Animator.StringToHash("IsReloading");
 
@@ -175,6 +175,9 @@ public class WeaponHolder : MonoBehaviour
 
         weaponAmmoUI.OnWeaponEquipped(equippedWeapon);
 
+        animator.SetBool(HasWeaponHash, true);
+        playerController.HasWeapon = true;
+
         // do IK stuff here if other weapons are one handed, etc.
         // set stuff in animator for other weapons
     }
@@ -184,6 +187,8 @@ public class WeaponHolder : MonoBehaviour
         if(!equippedWeapon)
         { return; }
 
+        animator.SetBool(HasWeaponHash, false);
+        playerController.HasWeapon = false;
         Destroy(equippedWeapon.gameObject);
         equippedWeapon = null;
     }

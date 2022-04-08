@@ -1980,6 +1980,7 @@ GameObject:
   - component: {fileID: 7948595546711439664}
   - component: {fileID: 7948595546711439665}
   - component: {fileID: 7948595546711439678}
+  - component: {fileID: 322820175}
   m_Layer: 0
   m_Name: Suzie
   m_TagString: Untagged
@@ -1994,7 +1995,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7101750382710326372}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -73.652, y: 0, z: 0.441}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2102,6 +2103,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 150
+--- !u!65 &322820175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101750382710326372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4890536, y: 0.9983363, z: 1.4430315}
+  m_Center: {x: 0.0025550723, y: 0.5861689, z: -0.0027502775}
 --- !u!1 &7105118387499441938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,6 +2936,10 @@ PrefabInstance:
       propertyPath: bystander
       value: 
       objectReference: {fileID: 7101750382710326372}
+    - target: {fileID: 7244320105083295711, guid: d8e33211fa4a3fd4aada34fc780c03cd, type: 3}
+      propertyPath: healingTriggerBox
+      value: 
+      objectReference: {fileID: 322820175}
     - target: {fileID: 7824631420469328404, guid: d8e33211fa4a3fd4aada34fc780c03cd, type: 3}
       propertyPath: m_Name
       value: CountdownTimer

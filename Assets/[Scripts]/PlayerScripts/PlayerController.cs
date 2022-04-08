@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool isRunning;
     public bool isAiming;
     public bool inInventory;
+    public bool HasWeapon;
 
     public InventoryComponent inventory;
     public WeaponHolder weaponHolder;

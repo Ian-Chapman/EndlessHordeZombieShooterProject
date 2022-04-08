@@ -10,7 +10,7 @@ public class AK47Component : WeaponComponent
     protected override void FireWeapon()
     {
         
-
+        //player cannot run and shoot at same time
         if (weaponStats.bulletsInClip > 0 && !isReloading && !weaponHolder.playerController.isRunning)
         {
             base.FireWeapon();

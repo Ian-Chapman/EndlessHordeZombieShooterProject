@@ -31,6 +31,7 @@ public class MovementComponent : MonoBehaviour
     public readonly int movementYHash = Animator.StringToHash("MovementY");
     public readonly int isJumpingHash = Animator.StringToHash("IsJumping");
     public readonly int isRunningHash = Animator.StringToHash("IsRunning");
+    public readonly int isRunningUnarmedHash = Animator.StringToHash("IsRunningUnarmed");
 
     private void Awake()
     {
@@ -103,9 +104,18 @@ public class MovementComponent : MonoBehaviour
     }
 
     public void OnRun(InputValue value)
-    { 
-        playerController.isRunning = value.isPressed;
-        playerAnimator.SetBool(isRunningHash, playerController.isRunning);
+    {
+        //if (playerController.isRunning == true)
+       // {
+            playerController.isRunning = value.isPressed;
+            playerAnimator.SetBool(isRunningHash, playerController.isRunning);
+       // }
+        //else if (playerController.isRunningUnarmed == true)
+        //{
+        //    playerController.isRunningUnarmed = value.isPressed;
+        //    playerAnimator.SetBool(isRunningUnarmedHash, playerController.isRunningUnarmed);
+        //}
+
 
     }
 
