@@ -5,7 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon", order = 2)]
 public class WeaponScriptable : EquipableScriptable
 {
+    Animator playerAnimator;
+
     public WeaponStats weaponStats;
+
+    public void Start()
+    {
+       
+    }
 
     public override void UseItem(PlayerController playerController)
     {

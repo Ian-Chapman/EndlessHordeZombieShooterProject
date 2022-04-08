@@ -105,18 +105,8 @@ public class MovementComponent : MonoBehaviour
 
     public void OnRun(InputValue value)
     {
-        //if (playerController.isRunning == true)
-       // {
             playerController.isRunning = value.isPressed;
             playerAnimator.SetBool(isRunningHash, playerController.isRunning);
-       // }
-        //else if (playerController.isRunningUnarmed == true)
-        //{
-        //    playerController.isRunningUnarmed = value.isPressed;
-        //    playerAnimator.SetBool(isRunningUnarmedHash, playerController.isRunningUnarmed);
-        //}
-
-
     }
 
     public void OnJump(InputValue value)
