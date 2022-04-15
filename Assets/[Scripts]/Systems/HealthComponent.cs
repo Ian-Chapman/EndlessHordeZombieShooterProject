@@ -33,5 +33,13 @@ public class HealthComponent : MonoBehaviour, IDamageable
         }
     }
 
+    public virtual void HealDamage(int value)
+    {
+        if (currentHealth < maxHealth)
+        {
+            //heal without going past max HP
+            currentHealth = Mathf.Clamp(currentHealth + value, 0, maxHealth);
+        }
+    }
 
 }

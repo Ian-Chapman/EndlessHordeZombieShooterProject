@@ -11,7 +11,7 @@ public enum WeaponType
 
 public enum WeaponFiringPattern
 {
-    SemiAuto, FullAuto, ThreeShotBurstm, FiveShotBurst
+    SemiAuto, FullAuto, ThreeShotBurst, FiveShotBurst
 }
 
 [System.Serializable]
@@ -76,6 +76,7 @@ public class WeaponComponent : MonoBehaviour
         if(weaponScriptable)
         {
             weaponStats = weaponScriptable.weaponStats;
+            
         }
 
     }

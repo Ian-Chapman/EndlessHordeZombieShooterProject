@@ -9,6 +9,8 @@ public class WeaponHolder : MonoBehaviour
     [Header("WeaponToSpawn"), SerializeField]
     GameObject weaponToSpawn;
 
+    public Dictionary<WeaponType, WeaponStats> WeaponAmmoData;
+
     public PlayerController playerController;
     Animator animator;
     Sprite crosshairImage;
@@ -37,20 +39,21 @@ public class WeaponHolder : MonoBehaviour
     {
         playerController = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
-        
+        WeaponAmmoData = new Dictionary<WeaponType, WeaponStats>();
         playerController.inventory.AddItem(startingWeaponScriptable, 1);
+        WeaponAmmoData.Add(startingWeaponScriptable.weaponStats.weaponType, startingWeaponScriptable.weaponStats);
         //EquipWeapon(startingWeaponScriptable);
         //possibly move this to EquippedWeapon() to begin game without weapon
         //spawnedWeapon = Instantiate(weaponToSpawn, weaponSocketLocation.transform.position, weaponSocketLocation.transform.rotation, weaponSocketLocation.transform);
 
-        //startingWeaponScriptable.UseItem(playerController);
+            //startingWeaponScriptable.UseItem(playerController);
 
-        //equippedWeapon = spawnedWeapon.GetComponent<WeaponComponent>();
-        // equippedWeapon.Initialize(this, startingWeaponScriptable);
+            //equippedWeapon = spawnedWeapon.GetComponent<WeaponComponent>();
+            // equippedWeapon.Initialize(this, startingWeaponScriptable);
 
-        //PlayerEvents.InvokeOnWeaponEquipped(equippedWeapon);
+            //PlayerEvents.InvokeOnWeaponEquipped(equippedWeapon);
 
-        //gripIKSocketLocation = equippedWeapon.gripLocation;
+            //gripIKSocketLocation = equippedWeapon.gripLocation;
 
     }
 
@@ -139,6 +142,8 @@ public class WeaponHolder : MonoBehaviour
         animator.SetBool(isReloadingHash, true);
         equippedWeapon.StartReloading();
 
+        WeaponAmmoData[equippedWeapon.weaponStats.weaponType] = equippedWeapon.weaponStats;
+
         InvokeRepeating(nameof(StopReloading), 0, 0.1f);
     }
 
@@ -169,6 +174,12 @@ public class WeaponHolder : MonoBehaviour
         {return;}
 
         equippedWeapon.Initialize(this, weaponScriptable);
+
+        if (WeaponAmmoData.ContainsKey(equippedWeapon.weaponStats.weaponType))
+        {
+            equippedWeapon.weaponStats = WeaponAmmoData[equippedWeapon.weaponStats.weaponType];
+        }
+
         PlayerEvents.InvokeOnWeaponEquipped(equippedWeapon);
 
         gripIKSocketLocation = equippedWeapon.gripLocation;
@@ -186,6 +197,11 @@ public class WeaponHolder : MonoBehaviour
     {
         if(!equippedWeapon)
         { return; }
+        
+        if(WeaponAmmoData.ContainsKey(equippedWeapon.weaponStats.weaponType))
+        {
+            WeaponAmmoData[equippedWeapon.weaponStats.weaponType] = equippedWeapon.weaponStats;
+        }
 
         animator.SetBool(HasWeaponHash, false);
         playerController.HasWeapon = false;

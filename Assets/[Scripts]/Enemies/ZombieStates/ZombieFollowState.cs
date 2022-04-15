@@ -39,5 +39,12 @@ public class ZombieFollowState : ZombieStates
         {
             stateMachine.ChangeState(ZombieStateType.Attacking);
         }
+
+        //may not want to make the followTarget null. May want to add zombie bite animations
+        if (followTarget == null)
+        {
+            stateMachine.ChangeState(ZombieStateType.Idling);
+            //could set up a biting animation here
+        }
     }
 }
