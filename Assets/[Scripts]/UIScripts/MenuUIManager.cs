@@ -19,7 +19,17 @@ public class MenuUIManager : MonoBehaviour
 
     public void OnPlayButtonPressed()
     {
+        SceneManager.LoadScene("Opening");
+    }
+
+    public void OnSkipButtonPressed()
+    {
         SceneManager.LoadScene("Hospital");
+    }
+
+    public void OnQuitButtonPressed()
+    {
+        Application.Quit();
     }
 
 }

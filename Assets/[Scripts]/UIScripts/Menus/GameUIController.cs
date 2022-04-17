@@ -22,7 +22,7 @@ public class GameUIController : MonoBehaviour
         DisableAllMenus();
         EnableGameMenu();
         player = GameObject.Find("Player");
-        
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     //public void EnablePauseMenu()
