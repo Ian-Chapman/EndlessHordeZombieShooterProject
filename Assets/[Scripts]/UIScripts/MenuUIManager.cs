@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuUIManager : MonoBehaviour
 {
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,19 +28,39 @@ public class MenuUIManager : MonoBehaviour
     //Main Menu
     public void OnPlayButtonPressed()
     {
-        SceneManager.LoadScene("Opening");
+        Debug.Log("Play Button Pressed");
+        StartCoroutine(TransitionToOpeningScene());
     }
 
 
     //Opening
     public void OnSkipButtonPressed()
     {
+        Debug.Log("Skip Button Pressed");
         SceneManager.LoadScene("Hospital");
     }
 
     public void OnQuitButtonPressed()
     {
         Application.Quit();
+    }
+
+
+    //public IEnumerator DelayForFadeFromBlack()
+    //{
+    //    yield return new WaitForSeconds(2f);
+    //    SceneManager.LoadScene("Opening");
+
+    //}
+
+    public IEnumerator TransitionToOpeningScene()
+    {
+        //yield return new WaitForSeconds(2f);
+        animator.SetBool("isPlayButtonPressed", true);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Opening");
+        yield return new WaitForSeconds(70f);
+        SceneManager.LoadScene("Hospital");
     }
 
 }
