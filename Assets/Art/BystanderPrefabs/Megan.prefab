@@ -2171,7 +2171,6 @@ GameObject:
   - component: {fileID: 7734539773541741534}
   - component: {fileID: 7734539773541741535}
   - component: {fileID: 7734539773541741532}
-  - component: {fileID: 1335846529}
   - component: {fileID: 1335846536}
   m_Layer: 7
   m_Name: Megan
@@ -2229,7 +2228,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7464702227011653250}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2294,19 +2293,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 150
---- !u!65 &1335846529
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7464702227011653250}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4890536, y: 0.9983363, z: 1.4430315}
-  m_Center: {x: 0.0025550723, y: 0.5861689, z: -0.0027502775}
 --- !u!195 &1335846536
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2866,7 +2852,7 @@ PrefabInstance:
     - target: {fileID: 7244320105083295711, guid: d8e33211fa4a3fd4aada34fc780c03cd, type: 3}
       propertyPath: healingTriggerBox
       value: 
-      objectReference: {fileID: 1335846529}
+      objectReference: {fileID: 0}
     - target: {fileID: 7824631420469328404, guid: d8e33211fa4a3fd4aada34fc780c03cd, type: 3}
       propertyPath: m_Name
       value: CountdownTimer

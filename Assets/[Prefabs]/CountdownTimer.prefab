@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1819871517301882241}
   - component: {fileID: 7244320105083295711}
+  - component: {fileID: 6815963645120436066}
   m_Layer: 0
   m_Name: CountdownTimer
-  m_TagString: Untagged
+  m_TagString: CountdownTimer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +49,22 @@ MonoBehaviour:
   timerText: {fileID: 8118266470237708297}
   timeLeft: 0
   animator: {fileID: 0}
-  healingTriggerBox: {fileID: 0}
+  healingTriggerBox: {fileID: 6815963645120436066}
+  navMeshAgent: {fileID: 0}
+  isCured: 0
+--- !u!65 &6815963645120436066
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824631420469328404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9892855, y: 0.48237383, z: 1.8718531}
+  m_Center: {x: 0.014306068, y: 0.5, z: 0.05387613}
 --- !u!1 &8118266470237708296
 GameObject:
   m_ObjectHideFlags: 0

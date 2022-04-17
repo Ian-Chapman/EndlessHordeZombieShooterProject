@@ -139,7 +139,6 @@ GameObject:
   - component: {fileID: 752887704287533410}
   - component: {fileID: 752887704287533409}
   - component: {fileID: 752887704287533408}
-  - component: {fileID: 154189953}
   - component: {fileID: 154189960}
   m_Layer: 7
   m_Name: Leonard
@@ -198,7 +197,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482908466921104444}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -263,19 +262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 150
---- !u!65 &154189953
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482908466921104444}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4890536, y: 0.9983363, z: 1.4430315}
-  m_Center: {x: 0.0025550723, y: 0.5861689, z: -0.0027502775}
 --- !u!195 &154189960
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2967,7 +2953,7 @@ PrefabInstance:
     - target: {fileID: 7244320105083295711, guid: d8e33211fa4a3fd4aada34fc780c03cd, type: 3}
       propertyPath: healingTriggerBox
       value: 
-      objectReference: {fileID: 154189953}
+      objectReference: {fileID: 0}
     - target: {fileID: 7824631420469328404, guid: d8e33211fa4a3fd4aada34fc780c03cd, type: 3}
       propertyPath: m_Name
       value: CountdownTimer

@@ -10,11 +10,19 @@ public class GameUIController : MonoBehaviour
     [SerializeField] private GameHUDWidget InventoryCanvas;
 
     private GameHUDWidget ActiveWidget;
+    GameObject player;
+
+    public GameObject cureButton;
+    CountdownTimerComponent countdownTimerComponent;
+
+    
 
     private void Start()
     {
         DisableAllMenus();
         EnableGameMenu();
+        player = GameObject.Find("Player");
+        
     }
 
     //public void EnablePauseMenu()
@@ -47,6 +55,20 @@ public class GameUIController : MonoBehaviour
         //PauseCanvas.DisableWidget();
         InventoryCanvas.DisableWidget();
     }
+
+    public void OnCureButtonPressed()
+    {
+        if (player.GetComponent<PlayerController>().characterOverlap != null && 
+            player.GetComponent<PlayerController>().characterOverlap.tag == "CountdownTimer")
+        {
+            player.GetComponent<PlayerController>().characterOverlap.GetComponentInChildren<CountdownTimerComponent>().isCured = true;
+            Debug.Log("Cure button pressed");
+            Destroy(player.GetComponent<PlayerController>().characterOverlap.GetComponentInChildren<CountdownTimerComponent>().timerText);
+            player.GetComponent<PlayerController>().characterOverlap.GetComponentInChildren<CountdownTimerComponent>().healingTriggerBox.enabled = false;
+            cureButton.SetActive(false);
+        }
+    }
+
 }
 
 public abstract class GameHUDWidget : MonoBehaviour

@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public WeaponHolder weaponHolder;
     public GameUIController uIController;
     public HealthComponent healthComponent;
+    public CureComponent cureComponent;
+    public GameObject characterOverlap;
 
     private void Awake()
     {
@@ -32,9 +34,9 @@ public class PlayerController : MonoBehaviour
         {
             healthComponent = GetComponent<HealthComponent>();
         }
-        if(uIController == null)
+        if (cureComponent == null)
         {
-            uIController = FindObjectOfType<GameUIController>();
+            cureComponent = GetComponent<CureComponent>();
         }
     }
 

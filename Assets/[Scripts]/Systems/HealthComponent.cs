@@ -16,7 +16,6 @@ public class HealthComponent : MonoBehaviour, IDamageable
     protected virtual void Start()
     {
         currentHealth = MaxHealth;
-        //countdownTimerComponent = GameObject.FindGameObjectsWithTag("Zombie").
     }
 
     public virtual void Destroy()
