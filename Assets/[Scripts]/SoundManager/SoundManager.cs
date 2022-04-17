@@ -17,6 +17,9 @@ public class SoundManager : MonoBehaviour
     List<AudioClip> dialogueSoundClips;
 
     [SerializeField]
+    List<AudioClip> soundEffectClips;
+
+    [SerializeField]
     public float pitchVariance = .15f;
 
     // This is a general template of how to use sound clips. Just make sure to reference the audio source in 
