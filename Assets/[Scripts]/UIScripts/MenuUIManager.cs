@@ -17,11 +17,20 @@ public class MenuUIManager : MonoBehaviour
         
     }
 
+    //Title Sceen
+    public void OnTitleScreenClicked()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    //Main Menu
     public void OnPlayButtonPressed()
     {
         SceneManager.LoadScene("Opening");
     }
 
+
+    //Opening
     public void OnSkipButtonPressed()
     {
         SceneManager.LoadScene("Hospital");
