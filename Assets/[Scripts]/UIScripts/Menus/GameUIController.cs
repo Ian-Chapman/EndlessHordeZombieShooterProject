@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameUIController : MonoBehaviour
 {
+    PlayerController playerController;
 
     [SerializeField] private GameHUDWidget GameCanvas;
     //[SerializeField] private GameHUDWidget PauseCanvas;
@@ -13,16 +15,18 @@ public class GameUIController : MonoBehaviour
     GameObject player;
 
     public GameObject cureButton;
+    public GameObject pausePanel;
+    public GameObject pauseButton;
     CountdownTimerComponent countdownTimerComponent;
-
-    
 
     private void Start()
     {
+        playerController = GetComponent<PlayerController>();
         DisableAllMenus();
         EnableGameMenu();
         player = GameObject.Find("Player");
         Cursor.lockState = CursorLockMode.Confined;
+        pausePanel.SetActive(false);
     }
 
     //public void EnablePauseMenu()
@@ -67,6 +71,26 @@ public class GameUIController : MonoBehaviour
             player.GetComponent<PlayerController>().characterOverlap.GetComponentInChildren<CountdownTimerComponent>().healingTriggerBox.enabled = false;
             cureButton.SetActive(false);
         }
+    }
+
+    public void OnPauseButtonPressed()
+    {
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
+        pauseButton.SetActive(false);
+        playerController.isFiring = false;
+    }
+
+    public void OnResumeButtonPressed()
+    {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+        pauseButton.SetActive(true);
+    }
+
+    public void OnMainMenuButtonPressed()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
 }

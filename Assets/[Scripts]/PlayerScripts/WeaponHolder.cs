@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class WeaponHolder : MonoBehaviour
 {
+    public GameObject weaponInfoPanel;
 
     [Header("WeaponToSpawn"), SerializeField]
     GameObject weaponToSpawn;
@@ -46,14 +47,16 @@ public class WeaponHolder : MonoBehaviour
         //possibly move this to EquippedWeapon() to begin game without weapon
         //spawnedWeapon = Instantiate(weaponToSpawn, weaponSocketLocation.transform.position, weaponSocketLocation.transform.rotation, weaponSocketLocation.transform);
 
-            //startingWeaponScriptable.UseItem(playerController);
+        //startingWeaponScriptable.UseItem(playerController);
 
-            //equippedWeapon = spawnedWeapon.GetComponent<WeaponComponent>();
-            // equippedWeapon.Initialize(this, startingWeaponScriptable);
+        //equippedWeapon = spawnedWeapon.GetComponent<WeaponComponent>();
+        // equippedWeapon.Initialize(this, startingWeaponScriptable);
 
-            //PlayerEvents.InvokeOnWeaponEquipped(equippedWeapon);
+        //PlayerEvents.InvokeOnWeaponEquipped(equippedWeapon);
 
-            //gripIKSocketLocation = equippedWeapon.gripLocation;
+        //gripIKSocketLocation = equippedWeapon.gripLocation;
+
+        weaponInfoPanel.SetActive(false);
 
     }
 
@@ -188,6 +191,7 @@ public class WeaponHolder : MonoBehaviour
 
         animator.SetBool(HasWeaponHash, true);
         playerController.HasWeapon = true;
+        weaponInfoPanel.SetActive(true);
 
         // do IK stuff here if other weapons are one handed, etc.
         // set stuff in animator for other weapons
@@ -205,6 +209,7 @@ public class WeaponHolder : MonoBehaviour
 
         animator.SetBool(HasWeaponHash, false);
         playerController.HasWeapon = false;
+        weaponInfoPanel.SetActive(false);
         Destroy(equippedWeapon.gameObject);
         equippedWeapon = null;
     }
