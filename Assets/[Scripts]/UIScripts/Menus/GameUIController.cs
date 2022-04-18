@@ -90,6 +90,7 @@ public class GameUIController : MonoBehaviour
 
     public void OnMainMenuButtonPressed()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 

@@ -40,6 +40,16 @@ public class MenuUIManager : MonoBehaviour
         SceneManager.LoadScene("Hospital");
     }
 
+    public void OnCreditsButtonPressed()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void OnCreditsBackButtonPressed()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void OnQuitButtonPressed()
     {
         Application.Quit();

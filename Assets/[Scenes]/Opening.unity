@@ -358,8 +358,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Click anywhere to skip  '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02c31a5925f07f94295a86d8403548ec, type: 2}
-  m_sharedMaterial: {fileID: 8882154573121993940, guid: 02c31a5925f07f94295a86d8403548ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4a24a9c50d367441b77c928853f940f, type: 2}
+  m_sharedMaterial: {fileID: 3599724341649141328, guid: d4a24a9c50d367441b77c928853f940f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
