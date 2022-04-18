@@ -18,16 +18,17 @@ public class CountdownTimerComponent : MonoBehaviour
     public NavMeshAgent navMeshAgent;
 
     GameUIController gameUIController;
-    
-    
-    
 
+    MovementComponent movementComponent;
+   
     public bool isCured = false;
 
     private void Start()
     {
         gameUIController = GameObject.Find("UIController").GetComponent<GameUIController>();
         gameUIController.cureButton.SetActive(false);
+        movementComponent = GameObject.Find("Player").GetComponent<MovementComponent>();
+
     }
 
     // Update is called once per frame
@@ -47,6 +48,7 @@ public class CountdownTimerComponent : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            movementComponent.aimSensitivity = 0;
             gameUIController.cureButton.SetActive(true);
             Debug.Log("Player hit trigger");
             other.gameObject.GetComponent<PlayerController>().characterOverlap = this.gameObject;
@@ -57,6 +59,7 @@ public class CountdownTimerComponent : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            movementComponent.aimSensitivity = 4;
             gameUIController.cureButton.SetActive(false);
             other.gameObject.GetComponent<PlayerController>().characterOverlap = null;
         }
@@ -84,6 +87,8 @@ public class CountdownTimerComponent : MonoBehaviour
                 this.healingTriggerBox.enabled = false;
                 StartCoroutine(DelayForAgony());
                 Destroy(timerText);
+                gameUIController.healthyPatientsRemaining++;
+                gameUIController.healthyText.text = gameUIController.healthyPatientsRemaining.ToString();
             }
         }
 

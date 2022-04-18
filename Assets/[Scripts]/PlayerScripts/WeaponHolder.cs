@@ -43,18 +43,6 @@ public class WeaponHolder : MonoBehaviour
         WeaponAmmoData = new Dictionary<WeaponType, WeaponStats>();
         playerController.inventory.AddItem(startingWeaponScriptable, 1);
         WeaponAmmoData.Add(startingWeaponScriptable.weaponStats.weaponType, startingWeaponScriptable.weaponStats);
-        //EquipWeapon(startingWeaponScriptable);
-        //possibly move this to EquippedWeapon() to begin game without weapon
-        //spawnedWeapon = Instantiate(weaponToSpawn, weaponSocketLocation.transform.position, weaponSocketLocation.transform.rotation, weaponSocketLocation.transform);
-
-        //startingWeaponScriptable.UseItem(playerController);
-
-        //equippedWeapon = spawnedWeapon.GetComponent<WeaponComponent>();
-        // equippedWeapon.Initialize(this, startingWeaponScriptable);
-
-        //PlayerEvents.InvokeOnWeaponEquipped(equippedWeapon);
-
-        //gripIKSocketLocation = equippedWeapon.gripLocation;
 
         weaponInfoPanel.SetActive(false);
 
