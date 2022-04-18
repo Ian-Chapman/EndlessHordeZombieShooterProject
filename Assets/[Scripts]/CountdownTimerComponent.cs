@@ -87,8 +87,6 @@ public class CountdownTimerComponent : MonoBehaviour
                 this.healingTriggerBox.enabled = false;
                 StartCoroutine(DelayForAgony());
                 Destroy(timerText);
-                gameUIController.healthyPatientsRemaining++;
-                gameUIController.healthyText.text = gameUIController.healthyPatientsRemaining.ToString();
             }
         }
 

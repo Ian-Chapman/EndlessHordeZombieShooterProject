@@ -38,6 +38,8 @@ public class GameUIController : MonoBehaviour
 
     public void Update()
     {
+        healthyText.text = healthyPatientsRemaining.ToString();
+
         if (healthyPatientsRemaining < 14)
         {
             //game over
