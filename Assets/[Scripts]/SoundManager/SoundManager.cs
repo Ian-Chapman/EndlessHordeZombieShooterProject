@@ -8,19 +8,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource soundSource;
 
     [SerializeField]
-    List<AudioClip> zombieSoundClips;
-
-    [SerializeField]
-    List<AudioClip> playerSoundClips;
-
-    [SerializeField]
     List<AudioClip> dialogueSoundClips;
-
-    [SerializeField]
-    List<AudioClip> soundEffectClips;
-
-    [SerializeField]
-    public float pitchVariance = .15f;
 
     // This is a general template of how to use sound clips. Just make sure to reference the audio source in 
     // the scripts you want to call the sounds in.
@@ -29,16 +17,24 @@ public class SoundManager : MonoBehaviour
     //soundManager.soundSource.pitch = 1.0f + Random.Range(-pitchVariance, pitchVariance);
     //soundManager.soundSource.Play();
 
-    public void GunShotSound()
+    private void Start()
     {
-        soundSource.clip = playerSoundClips[1];
-        soundSource.Play();
+        StartCoroutine(LookAtAllThatGas());
     }
 
-    public void ReloadSound()
+    private void Update()
     {
-        soundSource.clip = playerSoundClips[0];
+        
+
+    }
+
+
+    public IEnumerator LookAtAllThatGas()
+    {
+        yield return new WaitForSeconds(2.5f);
+        soundSource.clip = dialogueSoundClips[0];
         soundSource.Play();
     }
+    
 
 }

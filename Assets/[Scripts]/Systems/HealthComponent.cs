@@ -32,7 +32,6 @@ public class HealthComponent : MonoBehaviour, IDamageable
         if (currentHealth <= 0)
         {
             Destroy();
-            SceneManager.LoadScene("GameOver");
         }
     }
 

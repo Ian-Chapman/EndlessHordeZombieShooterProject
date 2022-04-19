@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthComponent : HealthComponent
 {
@@ -17,6 +18,7 @@ public class PlayerHealthComponent : HealthComponent
         //load new game over scene when at 0 HP
         //could also fade something in like a black UI canvas and play some death music?
         //play a death animation
+        SceneManager.LoadScene("GameOver");
         base.Destroy();
     }
 }

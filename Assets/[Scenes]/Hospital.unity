@@ -3505,6 +3505,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1143461518310739851, guid: 39df8b8490aedac4fb624fe353601ad9, type: 3}
+      propertyPath: timeLeft
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143461518310739851, guid: 39df8b8490aedac4fb624fe353601ad9, type: 3}
       propertyPath: navMeshAgent
       value: 
       objectReference: {fileID: 258049161}
@@ -7545,7 +7549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ee72be92d83d145ab54458ea397e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfZombiesToSpawn: 15
+  numberOfZombiesToSpawn: 200
   zombiePrefab:
   - {fileID: 1231573334}
   - {fileID: 919132148708974388}
@@ -40410,7 +40414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 776848163423785169, guid: b18305c9996946346acc6ca2fd557206, type: 3}
       propertyPath: timeLeft
-      value: 90
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 776848163423785169, guid: b18305c9996946346acc6ca2fd557206, type: 3}
       propertyPath: navMeshAgent
@@ -41125,6 +41129,10 @@ PrefabInstance:
     - target: {fileID: 1045600664614168111, guid: 39df8b8490aedac4fb624fe353601ad9, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143461518310739851, guid: 39df8b8490aedac4fb624fe353601ad9, type: 3}
+      propertyPath: timeLeft
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 1143461518310739851, guid: 39df8b8490aedac4fb624fe353601ad9, type: 3}
       propertyPath: navMeshAgent
