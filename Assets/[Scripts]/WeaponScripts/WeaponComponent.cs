@@ -46,6 +46,9 @@ public class WeaponComponent : MonoBehaviour
     [SerializeField]
     public WeaponStats weaponStats;
 
+    public AudioSource akFire;
+    public AudioSource reloadSound;
+
     public bool isFiring = false;
     public bool isReloading = false;
     protected Camera mainCamera;
@@ -106,6 +109,7 @@ public class WeaponComponent : MonoBehaviour
         {
             firingEffect.Stop();
         }
+        akFire.Stop();
     }
 
     protected virtual void FireWeapon()
@@ -120,6 +124,7 @@ public class WeaponComponent : MonoBehaviour
     {
         isReloading = true;
         ReloadWeapon();
+        reloadSound.Play();
     }
 
     public virtual void StopReloading()

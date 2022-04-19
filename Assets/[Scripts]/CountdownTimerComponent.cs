@@ -22,13 +22,13 @@ public class CountdownTimerComponent : MonoBehaviour
     MovementComponent movementComponent;
    
     public bool isCured = false;
+    public bool preZombie = true;
 
     private void Start()
     {
         gameUIController = GameObject.Find("UIController").GetComponent<GameUIController>();
         gameUIController.cureButton.SetActive(false);
         movementComponent = GameObject.Find("Player").GetComponent<MovementComponent>();
-
     }
 
     // Update is called once per frame
@@ -68,10 +68,11 @@ public class CountdownTimerComponent : MonoBehaviour
     private void BystanderStatus()
     {
 
-        if (!isCured)
+        if (!isCured && preZombie)
         {
             timeLeft -= Time.deltaTime;
             timerText.text = timeLeft.ToString();
+
 
             if (timeLeft > 0)
             {
@@ -81,15 +82,18 @@ public class CountdownTimerComponent : MonoBehaviour
 
             if (timeLeft <= 0)
             {
-                //Destroy(bystander);
-                //CureComponent.isZombie = true;
                 animator.SetBool("isBecomeZombie", true);
                 this.healingTriggerBox.enabled = false;
                 StartCoroutine(DelayForAgony());
                 Destroy(timerText);
+                gameUIController.healthyPatientsRemaining--;
+                gameUIController.healthyText.text = gameUIController.healthyPatientsRemaining.ToString();
+                preZombie = false;
+                Debug.Log("I want brains!!!");
             }
         }
 
     }
-
+    //public int healthyPatientsRemaining = 18;
+    //public TextMeshProUGUI healthyText;
 }

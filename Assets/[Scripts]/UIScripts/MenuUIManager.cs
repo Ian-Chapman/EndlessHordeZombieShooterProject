@@ -50,6 +50,17 @@ public class MenuUIManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void OnRetryButtonPressed()
+    {
+        SceneManager.LoadScene("Hospital");
+    }
+
+    public void OnMenuButtonPressed()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void OnQuitButtonPressed()
     {
         Application.Quit();

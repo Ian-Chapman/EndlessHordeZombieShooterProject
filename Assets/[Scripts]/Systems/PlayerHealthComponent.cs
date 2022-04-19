@@ -17,6 +17,6 @@ public class PlayerHealthComponent : HealthComponent
         //load new game over scene when at 0 HP
         //could also fade something in like a black UI canvas and play some death music?
         //play a death animation
-        //base.Destroy();
+        base.Destroy();
     }
 }

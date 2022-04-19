@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthComponent : MonoBehaviour, IDamageable
 {
@@ -12,6 +13,8 @@ public class HealthComponent : MonoBehaviour, IDamageable
     [SerializeField]
     public float maxHealth;
     public float MaxHealth => maxHealth;
+
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
@@ -29,6 +32,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
         if (currentHealth <= 0)
         {
             Destroy();
+            SceneManager.LoadScene("GameOver");
         }
     }
 

@@ -16,12 +16,14 @@ public class GameUIController : MonoBehaviour
     private GameHUDWidget ActiveWidget;
     GameObject player;
 
+    public AudioSource cureSound;
+
     public GameObject cureButton;
     public GameObject pausePanel;
     public GameObject pauseButton;
     CountdownTimerComponent countdownTimerComponent;
     public int numCured;
-    public int healthyPatientsRemaining;
+    public int healthyPatientsRemaining = 18;
     public TextMeshProUGUI curedText;
     public TextMeshProUGUI healthyText;
 
@@ -40,14 +42,14 @@ public class GameUIController : MonoBehaviour
     {
         healthyText.text = healthyPatientsRemaining.ToString();
 
-        if (healthyPatientsRemaining < 14)
+        if (healthyPatientsRemaining < 12)
         {
-            //game over
+            SceneManager.LoadScene("GameOver");
         }
 
-        if (numCured >= 14)
+        if (numCured >= 12)
         {
-            //game win
+            SceneManager.LoadScene("WinScene");
         }
     }
 
@@ -82,6 +84,7 @@ public class GameUIController : MonoBehaviour
             movementComponent.aimSensitivity = 4;
             player.GetComponent<PlayerController>().characterOverlap.GetComponentInChildren<CountdownTimerComponent>().isCured = true;
             Debug.Log("Cure button pressed");
+            cureSound.Play();
             Destroy(player.GetComponent<PlayerController>().characterOverlap.GetComponentInChildren<CountdownTimerComponent>().timerText);
             player.GetComponent<PlayerController>().characterOverlap.GetComponentInChildren<CountdownTimerComponent>().healingTriggerBox.enabled = false;
             cureButton.SetActive(false);
@@ -113,6 +116,8 @@ public class GameUIController : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
+
+
 
 }
 

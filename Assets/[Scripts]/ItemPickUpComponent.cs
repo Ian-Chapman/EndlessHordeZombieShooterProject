@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ItemPickUpComponent : MonoBehaviour
 {
+    public AudioSource pickupSound;
+
     [SerializeField]
     ItemScript pickupItem;
 
@@ -67,6 +69,7 @@ public class ItemPickUpComponent : MonoBehaviour
 
         if (playerInventory)
         {
+            pickupSound.Play();
             playerInventory.AddItem(ItemInstance, amount);
         }
 
