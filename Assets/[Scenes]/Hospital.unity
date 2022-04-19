@@ -7549,7 +7549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ee72be92d83d145ab54458ea397e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfZombiesToSpawn: 200
+  numberOfZombiesToSpawn: 120
   zombiePrefab:
   - {fileID: 1231573334}
   - {fileID: 919132148708974388}

@@ -31,6 +31,7 @@ public class MenuUIManager : MonoBehaviour
     {
         Debug.Log("Play Button Pressed");
         StartCoroutine(TransitionToOpeningScene());
+        
     }
 
 
@@ -77,13 +78,6 @@ public class MenuUIManager : MonoBehaviour
         Application.Quit();
     }
 
-
-    //public IEnumerator DelayForFadeFromBlack()
-    //{
-    //    yield return new WaitForSeconds(2f);
-    //    SceneManager.LoadScene("Opening");
-
-    //}
 
     public IEnumerator TransitionToOpeningScene()
     {
