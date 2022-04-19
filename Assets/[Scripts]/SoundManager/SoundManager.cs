@@ -35,6 +35,11 @@ public class SoundManager : MonoBehaviour
         soundSource.clip = dialogueSoundClips[0];
         soundSource.Play();
     }
-    
+
+    public void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
 
 }

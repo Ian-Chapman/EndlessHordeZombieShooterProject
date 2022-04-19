@@ -21882,7 +21882,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a28ee9a5435081140a0e74b816b1a4cd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -43884,8 +43884,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 407720285337979912, guid: 1430cb2f110e34a4ca577c1d346ba419, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 407720285337980021, guid: 1430cb2f110e34a4ca577c1d346ba419, type: 3}
+      propertyPath: dialogueSoundClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407720285337980021, guid: 1430cb2f110e34a4ca577c1d346ba419, type: 3}
+      propertyPath: dialogueSoundClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 307444ad1eb67684ba698b2a266118ac, type: 3}
     - target: {fileID: 407720285337980022, guid: 1430cb2f110e34a4ca577c1d346ba419, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -43929,6 +43937,14 @@ PrefabInstance:
     - target: {fileID: 407720285337980022, guid: 1430cb2f110e34a4ca577c1d346ba419, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407720285337980023, guid: 1430cb2f110e34a4ca577c1d346ba419, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 407720285337980023, guid: 1430cb2f110e34a4ca577c1d346ba419, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1430cb2f110e34a4ca577c1d346ba419, type: 3}

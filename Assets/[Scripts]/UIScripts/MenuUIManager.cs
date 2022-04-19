@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuUIManager : MonoBehaviour
 {
+    public GameObject howToPlayPanel;
     public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        howToPlayPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,6 +60,16 @@ public class MenuUIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OnHowToPlayButtonPressed()
+    {
+        howToPlayPanel.SetActive(true);
+    }
+
+    public void OnHowToPlayBackButtonPressed()
+    {
+        howToPlayPanel.SetActive(false);
     }
 
     public void OnQuitButtonPressed()
